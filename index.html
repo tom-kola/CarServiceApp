@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=
+  , initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<script
+			src="https://kit.fontawesome.com/65449dedd2.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Saira:wght@200;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="auto">
+				<div class="leftside">
+					<h1>Twój samochód</h1>
+					<p class="brand br1">Chevrolet</p>
+					<p class="brand br2">Captiva</p>
+					<p class="brand br3">2.4 PB 2012</p>
+					<p class="brand br4"><span class="km">136000</span> KM</p>
+					<button class="edit-car">Edytuj</button>
+				</div>
+				<div class="rightside">
+					<div class="picture">
+						<i class="fa-solid fa-xmark x"></i>
+					</div>
+					<div class="buttons">
+						<button class="edit-photo">Zmień</button>
+						<button class="large">
+							Powiększ<i
+								class="fa-solid fa-magnifying-glass-plus"
+							></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="popup-car">
+			<div class="popup-wrapper">
+				<p class="brand">Marka:</p>
+				<input
+					class="input1"
+					type="text"
+					placeholder="Marka Twojego samochodu..."
+				/>
+				<i class="fa-solid fa-circle-plus"></i>
+				<p class="error-info er1"></p>
+				<p class="brand">Model:</p>
+				<input
+					class="input2"
+					type="text"
+					placeholder="Model Twojego samochodu..."
+				/>
+				<i class="fa-solid fa-circle-plus"></i>
+				<p class="error-info er2"></p>
+				<p class="brand">Wersja:</p>
+				<input
+					class="input3"
+					type="text"
+					placeholder="Wersja Twojego samochodu..."
+				/>
+				<i class="fa-solid fa-circle-plus"></i>
+				<p class="error-info er3"></p>
+				<p class="brand">Aktualny przebieg:</p>
+				<input
+					class="input4"
+					type="number"
+					placeholder="Aktualny przebieg samochodu..."
+				/>
+				<i class="fa-solid fa-circle-plus"></i>
+				<p class="error-info er4"></p>
+				<p class="off"><i class="fa-solid fa-xmark x1"></i></p>
+			</div>
+		</div>
+		<div class="popup-avatars">
+			<div class="wrapper-avatars">
+				<div class="avatar avatar1"></div>
+				<div class="avatar avatar2"></div>
+				<div class="avatar avatar3"></div>
+				<div class="avatar avatar4"></div>
+			</div>
+			<button class="confirm">Potwierdź</button>
+			<p class="off"><i class="fa-solid fa-xmark x2"></i></p>
+		</div>
+		<section class="main">
+			<div class="wrapper-main">
+				<div class="categories">
+					<p class="category">Nazwa części</p>
+					<p class="category">Data wymiany</p>
+					<p class="category">Data nast. wymiany</p>
+					<p class="category">Przebieg pod. wym.</p>
+					<p class="category">Przebieg nast. wym.</p>
+					<p class="category">Pozostało</p>
+					<p class="category">Przejechano</p>
+				</div>
+				<ul>
+          <p class="error-info er7"></p>
+					<li>
+						<p class="result">Olej silnikowy</p>
+						<p class="result">2023-06-18</p>
+						<p class="result">2024-06-18</p>
+						<p class="result">10000</p>
+						<p class="result">11000</p>
+						<p class="result">5000 KM</p>
+						<p class="result">5000 KM</p>
+						<div class="edit-buttons">
+							<button class="edittask">Edytuj</button>
+							<button class="delete">Usuń</button>
+              <button class="arrow"><i class="fa-solid fa-square-caret-down arrow"></i></button>
+						</div>
+					</li>
+				</ul>
+				<div class="addnewbutton">
+					<button class="newtask">Dodaj nowy</button>
+				</div>
+			</div>
+			<div class="popup-task newtaskpopup">
+				<div class="popup-categories">
+					<p class="category">Nazwa części</p>
+					<p class="category">Data wymiany</p>
+					<p class="category">Data nast. wymiany</p>
+					<p class="category">Przebieg pod. wymiany</p>
+					<p class="category">Przebieg nast. wymiany</p>
+					<p class="category">Pozostało</p>
+					<p class="category">Przejechano</p>
+				</div>
+				<div class="popup-inputs">
+					<input type="text" class="cat cat1" placeholder="..." />
+					<input type="date" class="cat cat2"/>
+					<input type="date" class="cat cat3"/>
+					<input type="number" class="cat cat4" placeholder="..." />
+					<input type="number" class="cat cat5" placeholder="..." />
+					<p class="result cat6"></p>
+					<p class="result cat7"></p>
+				</div>
+				<p class="off"><i class="fa-solid fa-xmark x3"></i></p>
+				<p class="error-info er5"></p>
+				<button class="confirmtask">Potwierdź</button>
+			</div>
+			<div class="popup-task edittaskpopup">
+				<div class="popup-categories">
+					<p class="category">Nazwa części</p>
+					<p class="category">Data wymiany</p>
+					<p class="category">Data nast. wymiany</p>
+					<p class="category">Przebieg pod. wymiany</p>
+					<p class="category">Przebieg nast. wymiany</p>
+					<p class="category">Pozostało</p>
+					<p class="category">Przejechano</p>
+				</div>
+				<div class="popup-inputs edit-inputs">
+					<input type="text" class="cat category1" placeholder="..." />
+					<input type="date" class="cat category2" />
+					<input type="date" class="cat category3" />
+					<input type="number" class="cat category4" placeholder="..." />
+					<input type="number" class="cat category5" placeholder="..." />
+					<p class="result category6"></p>
+					<p class="result category7"></p>
+				</div>
+				<p class="off"><i class="fa-solid fa-xmark x4"></i></p>
+				<p class="error-info er6"></p>
+				<button class="confirmtask confirmedittask">Potwierdź</button>
+			</div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
+</html>

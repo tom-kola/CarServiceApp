@@ -1,0 +1,560 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+}
+body {
+	font-family: "Saira", arial, sans-serif;
+	
+}
+
+/* HEADER */
+header {
+	display: flex;
+	justify-content: center;
+	margin-top: 10vh;
+}
+
+div.auto {
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	height: 32vh;
+	background-color: rgb(58, 58, 58);
+	border-radius: 10px 10px 0 0;
+}
+div.leftside {
+	flex-basis: 50%;
+  position: relative;
+}
+div.leftside h1 {
+	padding: 15px 0 15px 30px;
+	font-size: 2.8rem;
+	text-transform: uppercase;
+	color: rgb(211, 211, 211);
+	cursor: default;
+}
+p.brand {
+	padding: 0 0 10px 30px;
+	font-size: 1.4rem;
+	color: rgb(211, 211, 211);
+	cursor: default;
+}
+div.leftside button {
+  position: absolute;
+  bottom: 0;
+  left: 140px;
+	width: 100px;
+	height: 30px;
+	margin: 0 0 35px 30px;
+	background-color: rgb(211, 211, 211);
+	border-radius: 5px;
+	border-style: none;
+	font-family: "Saira", arial, sans-serif;
+	font-size: 1.3rem;
+	cursor: pointer;
+	transition: 0.3s;
+}
+div.leftside button:hover {
+	background-color: rgb(223, 160, 0);
+}
+div.rightside {
+	flex-basis: 50%;
+	position: relative;
+}
+.picture {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	width: 160px;
+	height: 160px;
+	background-image: url(images/Auto.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border: 2px solid rgb(211, 211, 211);
+	border-radius: 10px;
+}
+.big-picture {
+	position: absolute;
+	left: 0;
+	top: 118%;
+	transform: translate(-50%, -50%);
+	width: 50vw;
+	height: 70vh;
+	/* background-image: url(images/Auto.jpg); */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border: 4px solid rgb(211, 211, 211);
+	border-radius: 10px;
+	z-index: 3;
+}
+.x {
+	display: none;
+	position: absolute;
+	left: 110%;
+	top: 0;
+	font-size: 2.6rem;
+	color: rgb(211, 211, 211);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.x:hover {
+	color: rgb(223, 160, 0);
+}
+div.rightside div.buttons {
+	position: absolute;
+	top: 70%;
+	left: 35%;
+	margin: 0 0 35px 40px;
+}
+div.buttons button {
+	width: 100px;
+	height: 30px;
+	background-color: rgb(211, 211, 211);
+	border-radius: 5px;
+	border-style: none;
+	font-family: "Saira", arial, sans-serif;
+	font-size: 1.3rem;
+	cursor: pointer;
+	transition: 0.3s;
+}
+div.buttons button:hover {
+	background-color: rgb(223, 160, 0);
+}
+button.large {
+	margin-left: 15px;
+}
+button.large i {
+	margin-left: 6px;
+	vertical-align: -1px;
+	color: rgb(58, 58, 58);
+}
+
+/* POPUP CAR */
+.popup-car {
+	display: none;
+	justify-content: center;
+	position: absolute;
+	left: 15vw;
+	top: 10vw;
+	width: 70%;
+	height: 60vh;
+	background-color: rgb(100, 100, 100);
+	border: 4px solid rgb(211, 211, 211);
+	border-radius: 10px;
+  z-index: 3;
+}
+.popup-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60%;
+}
+.popup-car p {
+	padding: 8px 0 8px 0;
+}
+.popup-car input {
+	padding: 4px;
+	border-style: none;
+	border-radius: 5px;
+}
+.popup-car input:focus {
+	outline: none;
+}
+.x1 {
+  display: block;
+	position: absolute;
+	top: 10%;
+	left: 95%;
+	font-size: 2.6rem;
+	color: rgb(211, 211, 211);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.x1:hover {
+	color: rgb(223, 160, 0);
+}
+.fa-circle-plus {
+	position: absolute;
+	left: 82%;
+	font-size: 2.6rem;
+	color: rgb(211, 211, 211);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.fa-circle-plus:hover {
+	color: rgb(223, 160, 0);
+}
+.fa-circle-plus:nth-of-type(1) {
+	top: 20%;
+}
+.fa-circle-plus:nth-of-type(2) {
+	top: 39%;
+}
+.fa-circle-plus:nth-of-type(3) {
+	top: 57%;
+}
+.fa-circle-plus:nth-of-type(4) {
+	top: 75%;
+}
+p.error-info {
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+
+/* DIV AVATARS */
+div.popup-avatars {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 48%;
+	transform: translate(-50%, -50%);
+	width: 50vw;
+	height: 70vh;
+	background-color: rgb(100, 100, 100);
+	border: 4px solid rgb(211, 211, 211);
+	border-radius: 10px;
+  z-index: 3;
+}
+div.wrapper-avatars {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	width: 70%;
+	height: 100%;
+	padding: 20px;
+}
+.avatar {
+	flex-basis: 40%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 40%;
+	border: 3px solid rgb(211, 211, 211);
+	border-radius: 10px;
+}
+.active {
+	border: 3px solid rgb(223, 160, 0);
+}
+div.avatar1 {
+	background-image: url(images/Auto.jpg);
+}
+div.avatar2 {
+	background-image: url(images/Auto2.jpg);
+}
+div.avatar3 {
+	background-image: url(images/Auto3.jpg);
+}
+div.avatar4 {
+	background-image: url(images/Auto4.jpg);
+}
+button.confirm {
+	position: absolute;
+	top: 90%;
+	left: 80%;
+	width: 100px;
+	height: 30px;
+	border-style: none;
+	border-radius: 5px;
+	background-color: rgb(211, 211, 211);
+	font-family: "Saira", arial, sans-serif;
+	font-size: 1.3rem;
+	cursor: pointer;
+	transition: 0.3s;
+}
+button.confirm:hover {
+	background-color: rgb(223, 160, 0);
+}
+
+.x2 {
+	position: absolute;
+	top: 5%;
+	left: 94%;
+	font-size: 2.6rem;
+	color: rgb(211, 211, 211);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.x2:hover {
+	color: rgb(223, 160, 0);
+}
+
+/* SECTION MAIN */
+section.main {
+	display: flex;
+	justify-content: center;
+}
+div.wrapper-main {
+  position: relative;
+	width: 70%;
+	min-height: 30vh;
+	background-color: rgb(211, 211, 211);
+	border-radius: 0 0 10px 10px;
+}
+.wrapper-main div.categories {
+	display: flex;
+	flex-basis: 100%;
+	margin-top: 15px;
+	height: 30px;
+}
+.wrapper-main p.category {
+	flex-basis: 15%;
+	flex-grow: 1;
+	line-height: 30px;
+	border-right: 1px solid rgb(58, 58, 58);
+	font-size: 1.25rem;
+	text-align: center;
+	color: rgb(58, 58, 58);
+	cursor: default;
+}
+p.category:last-child {
+	border-style: none;
+}
+.wrapper-main .addnewbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  width: 100%;
+  height: 100px;
+}
+button.newtask {
+	width: 140px;
+	height: 35px;
+	background-color: rgb(58, 58, 58);
+	border-style: none;
+	border-radius: 5px;
+	font-family: "Saira", arial, sans-serif;
+	font-size: 1.6rem;
+	color: rgb(211, 211, 211);
+	cursor: pointer;
+	transition: 0.3s;
+}
+button.newtask:hover {
+	background-color: rgb(223, 160, 0);
+	color: rgb(58, 58, 58);
+}
+/* POPUP TASK */
+
+.popup-task {
+	position: absolute;
+	top: 60%;
+	left: 15%;
+	width: 70%;
+	height: 20vh;
+	display: none;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	background-color: rgb(100, 100, 100);
+	border: 4px solid rgb(58, 58, 58);
+	border-radius: 10px;
+  z-index: 2;
+}
+.popup-task .popup-categories {
+	display: flex;
+}
+.popup-task p.category {
+	flex-basis: 15%;
+	height: 30px;
+  border-right: 1px solid rgb(58, 58, 58);
+	font-size: 1.1rem;
+  text-align: center;
+  line-height: 30px;
+}
+.popup-task p.category:last-child {
+	border-style: none;
+}
+.popup-inputs {
+	display: flex;
+	margin-top: 20px;
+}
+.popup-inputs input.cat {
+	width: 15%;
+	height: 30px;
+	border-style: none;
+	border-right: 1px solid rgb(58, 58, 58);
+	background-color: rgb(211, 211, 211);
+
+	color: rgb(100, 100, 100);
+}
+.popup-inputs input.cat:focus {
+	outline: none;
+}
+.popup-inputs p.result {
+	flex-basis: 15%;
+	height: 30px;
+	background-color: rgb(211, 211, 211);
+	font-size: 1.2rem;
+	color: rgb(58, 58, 58);
+}
+.popup-inputs p.result:nth-of-type(1) {
+	border-right: 1px solid rgb(58, 58, 58);
+}
+.x3 {
+	position: absolute;
+	top: 0;
+	left: 105%;
+	font-size: 2.6rem;
+	color: rgb(58, 58, 58);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.x3:hover {
+	color: rgb(223, 160, 0);
+}
+.popup-task .er5{
+  padding: 5px;
+  padding-top: 20px;
+  font-size: 1.4rem;
+}
+
+/* UL LISTA */
+
+.wrapper-main ul {
+	margin: 10px 0 10px 0;
+	list-style: none;
+  
+}
+.wrapper-main li {
+	display: flex;
+  position: relative;
+	width: 100%;
+	height: 40px;
+}
+.result {
+	flex-basis: 15%;
+	height: 30px;
+	background-color: rgb(100, 100, 100);
+	border-right: 1px solid rgb(211, 211, 211);
+	font-size: 1.3rem;
+	text-align: center;
+	line-height: 30px;
+}
+.wrapper-main li p.result:nth-of-type(7) {
+	border-style: none;
+}
+/* .container{
+  
+} */
+.edit-buttons{
+ display: block;
+ 
+}
+.edittask {
+	position: absolute;
+	top: 52%;
+	left: 45.1%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	background-color: rgb(140, 140, 140);
+	border-style: none;
+	border-radius: 10px 0 0 10px;
+	font-size: 0;
+	text-align: center;
+	line-height: 30px;
+	color: rgb(58, 58, 58);
+	transition: 0.3s;
+  cursor: pointer;
+  z-index: 1;
+}
+.edittask:hover{
+  color: greenyellow;
+}
+.delete {
+	position: absolute;
+	top: 52%;
+	left: 54%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	background-color: rgb(140, 140, 140);
+  border-style: none;
+  border-left: 2px solid rgb(58, 58, 58);
+	border-radius: 0 10px 10px 0;
+	font-size: 0;
+	text-align: center;
+	line-height: 30px;
+	color: rgb(58, 58, 58);
+	transition: 0.3s;
+  cursor: pointer;
+  z-index: 1;
+}
+.delete:hover{
+  color: tomato;
+}
+.visible{
+  width: 100px;
+  height: 30px;
+}
+.fontsizetool{
+  font-size: 1.4rem;
+}
+.arrow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:10px;
+  height: 10px;
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: rgb(58, 58, 58);
+  transition: 0.3s;
+  cursor: pointer;
+  
+}
+.arrow:hover{
+  color: rgb(223, 160, 0);
+}
+.confirmtask{
+  position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 30px;
+	background-color: rgb(58, 58, 58);
+	border-style: none;
+	border-radius: 5px;
+	font-family: "Saira", arial, sans-serif;
+	font-size: 1.6rem;
+	color: rgb(211, 211, 211);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.confirmtask:hover{
+  background-color: rgb(223, 160, 0);
+  color: rgb(58, 58, 58);
+}
+.edittaskpopup{
+  display: none;
+  z-index: 2;
+}
+.block{
+  display: block;
+}
+.x4 {
+	position: absolute;
+	top: 0;
+	left: 105%;
+	font-size: 2.6rem;
+	color: rgb(58, 58, 58);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.x4:hover {
+	color: rgb(223, 160, 0);
+}
+.er7{
+  text-align: center;
+  font-size: 1.4rem;
+  color: tomato;
+}
