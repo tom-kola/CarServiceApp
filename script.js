@@ -1,4 +1,4 @@
-let kilometers
+let kilometers;
 let largeBtn;
 let editPhotoBtn;
 let closeMarkBtn;
@@ -22,7 +22,7 @@ let er2;
 let er3;
 let er4;
 let er5;
-let er6
+let er6;
 let er7;
 let plus1Btn;
 let plus2Btn;
@@ -60,10 +60,10 @@ let category5Value;
 let category6Value;
 let category7Value;
 let confirmTaskBtn;
-let numCat4
-let numCat5
-let numCat6
-let numCat7
+let numCat4;
+let numCat5;
+let numCat6;
+let numCat7;
 let ulList;
 let liElement;
 let newTask;
@@ -80,11 +80,11 @@ let actualKm;
 let divEditBtns;
 let popupEdit;
 let closeMarkBtn4;
-let taskToEdit
-let confirmEditTaskBtn
-let editedTask
-let result
-let span
+let taskToEdit;
+let confirmEditTaskBtn;
+let editedTask;
+let result;
+let span;
 
 const main = () => {
 	prepareDOMElements();
@@ -112,7 +112,7 @@ const prepareDOMElements = () => {
 	er3 = document.querySelector(".er3");
 	er4 = document.querySelector(".er4");
 	er5 = document.querySelector(".er5");
-  er6 = document.querySelector('.er6')
+	er6 = document.querySelector(".er6");
 	er7 = document.querySelector(".er7");
 	plus1Btn = document.querySelector(".fa-circle-plus:nth-of-type(1)");
 	plus2Btn = document.querySelector(".fa-circle-plus:nth-of-type(2)");
@@ -148,7 +148,7 @@ const prepareDOMElements = () => {
 	cat5Value = document.querySelector(".cat5");
 	cat6Value = document.querySelector(".cat6");
 	cat7Value = document.querySelector(".cat7");
-  category1Value = document.querySelector(".category1");
+	category1Value = document.querySelector(".category1");
 	category2Value = document.querySelector(".category2");
 	category3Value = document.querySelector(".category3");
 	category4Value = document.querySelector(".category4");
@@ -163,9 +163,9 @@ const prepareDOMElements = () => {
 	divEditBtns = document.querySelector(".edit-buttons");
 	popupEdit = document.querySelector(".edittaskpopup");
 	closeMarkBtn4 = document.querySelector(".x4");
-  confirmEditTaskBtn = document.querySelector('.confirmedittask')
-  result = document.querySelector('.result')
-	span = document.querySelector('.result span')
+	confirmEditTaskBtn = document.querySelector(".confirmedittask");
+	result = document.querySelector(".result");
+	span = document.querySelector(".result span");
 };
 const prepareDOMEvents = () => {
 	largeBtn.addEventListener("click", largePicture);
@@ -184,15 +184,12 @@ const prepareDOMEvents = () => {
 	input2.addEventListener("keyup", enterKeyCheck2);
 	input3.addEventListener("keyup", enterKeyCheck3);
 	input4.addEventListener("keyup", enterKeyCheck4);
-	// arrow.addEventListener("click", showEditButtons);
 	newTaskBtn.addEventListener("click", openNewTask);
 	closeTaskBtn.addEventListener("click", closeNewTask);
 	closeMarkBtn4.addEventListener("click", closeEditTask);
-
 	confirmTaskBtn.addEventListener("click", addNewTask);
 	ulList.addEventListener("click", checkClick);
-  confirmEditTaskBtn.addEventListener('click', addEditTask)
-
+	confirmEditTaskBtn.addEventListener("click", addEditTask);
 };
 
 const largePicture = () => {
@@ -428,11 +425,10 @@ const addNewTask = () => {
 		er7.textContent = "";
 		createEditButtons();
 
-    kilometers = " KM"
+		kilometers = " KM";
 
-	
-    newResult6.textContent += kilometers;
-    newResult7.textContent += kilometers;
+		newResult6.textContent += kilometers;
+		newResult7.textContent += kilometers;
 
 		for (const cat of catArray) {
 			cat.style.backgroundColor = "rgb(211, 211, 211";
@@ -481,24 +477,22 @@ const checkClick = (e) => {
 		openEditTask(e);
 	} else if (e.target.matches(".delete")) {
 		deleteTask(e);
-	}else if(e.target.matches('.confirmedittask')){
-    addEditTask(e);
-  }
+	} else if (e.target.matches(".confirmedittask")) {
+		addEditTask(e);
+	}
 };
 
 const openEditTask = (e) => {
-  taskToEdit = e.target.closest('li')
+	taskToEdit = e.target.closest("li");
 
-
-
-	category1Value.value = taskToEdit.children[0].textContent
-	category2Value.value = taskToEdit.children[1].textContent
-	category3Value.value = taskToEdit.children[2].textContent
-	category4Value.value = taskToEdit.children[3].textContent
-	category5Value.value = taskToEdit.children[4].textContent
-	category6Value.textContent = taskToEdit.children[5].textContent
-	category7Value.textContent = taskToEdit.children[6].textContent
-  popupEdit.classList.add("block");
+	category1Value.value = taskToEdit.children[0].textContent;
+	category2Value.value = taskToEdit.children[1].textContent;
+	category3Value.value = taskToEdit.children[2].textContent;
+	category4Value.value = taskToEdit.children[3].textContent;
+	category5Value.value = taskToEdit.children[4].textContent;
+	category6Value.textContent = taskToEdit.children[5].textContent;
+	category7Value.textContent = taskToEdit.children[6].textContent;
+	popupEdit.classList.add("block");
 };
 const closeEditTask = () => {
 	popupEdit.classList.remove("block");
@@ -514,98 +508,93 @@ const deleteTask = (e) => {
 };
 
 const addEditTask = () => {
-  
-		
-		
+	if (
+		category1Value.value === "" &&
+		category2Value.value === "" &&
+		category4Value.value === ""
+	) {
+		category1Value.style.backgroundColor = "tomato";
+		category2Value.style.backgroundColor = "tomato";
+		category4Value.style.backgroundColor = "tomato";
+		er6.textContent = "Te pola nie mogą być puste!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (
+		category1Value.value === "" &&
+		category2Value.value === "" &&
+		category4Value.value < 0
+	) {
+		category1Value.style.backgroundColor = "tomato";
+		category2Value.style.backgroundColor = "tomato";
+		category4Value.style.backgroundColor = "tomato";
+		er6.textContent = "Te pola nie mogą być puste lub są mniejsze od 0!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (category1Value.value === "" && category2Value.value === "") {
+		category1Value.style.backgroundColor = "tomato";
+		category2Value.style.backgroundColor = "tomato";
+		er6.textContent = "Te pola nie mogą być puste!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (category1Value.value === "" && category4Value.value === "") {
+		category1Value.style.backgroundColor = "tomato";
+		category4Value.style.backgroundColor = "tomato";
+		er6.textContent = "Te pola nie mogą być puste!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (category2Value.value === "" && category4Value.value === "") {
+		category2Value.style.backgroundColor = "tomato";
+		category4Value.style.backgroundColor = "tomato";
+		er6.textContent = "Te pola nie mogą być puste!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (category1Value.value === "") {
+		category1Value.style.backgroundColor = "tomato";
+		er6.textContent = "To pole nie może być puste!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (category2Value.value === "") {
+		category2Value.style.backgroundColor = "tomato";
+		er6.textContent = "To pole nie może być puste!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (category4Value.value === "") {
+		category4Value.style.backgroundColor = "tomato";
+		er6.textContent = "Wartość nie może być mniejsza od 0!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else if (category4Value.value < 0 || category5Value.value < 0) {
+		er6.textContent = "Te wartości nie mogą być mniejsze od 0!";
+		er6.style.color = "rgb(255, 0, 0)";
+	} else {
+		taskToEdit.children[0].textContent = category1Value.value;
+		taskToEdit.children[1].textContent = category2Value.value;
+		taskToEdit.children[2].textContent = category3Value.value;
+		taskToEdit.children[3].textContent = category4Value.value;
+		taskToEdit.children[4].textContent = category5Value.value;
+		taskToEdit.children[5].textContent = "";
+		taskToEdit.children[5].textContent =
+			Number(taskToEdit.children[4].textContent) -
+			Number(actualKm.textContent);
+		taskToEdit.children[6].textContent = "";
+		taskToEdit.children[6].textContent =
+			Number(actualKm.textContent) -
+			Number(taskToEdit.children[3].textContent);
 
-    if (
-      category1Value.value === "" &&
-      category2Value.value === "" &&
-      category4Value.value === ""
-    ) {
-      category1Value.style.backgroundColor = "tomato";
-      category2Value.style.backgroundColor = "tomato";
-      category4Value.style.backgroundColor = "tomato";
-      er6.textContent = "Te pola nie mogą być puste!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (
-      category1Value.value === "" &&
-      category2Value.value === "" &&
-      category4Value.value < 0
-    ) {
-      category1Value.style.backgroundColor = "tomato";
-      category2Value.style.backgroundColor = "tomato";
-      category4Value.style.backgroundColor = "tomato";
-      er6.textContent = "Te pola nie mogą być puste lub są mniejsze od 0!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (category1Value.value === "" && category2Value.value === "") {
-      category1Value.style.backgroundColor = "tomato";
-      category2Value.style.backgroundColor = "tomato";
-      er6.textContent = "Te pola nie mogą być puste!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (category1Value.value === "" && category4Value.value === "") {
-      category1Value.style.backgroundColor = "tomato";
-      category4Value.style.backgroundColor = "tomato";
-      er6.textContent = "Te pola nie mogą być puste!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (category2Value.value === "" && category4Value.value === "") {
-      category2Value.style.backgroundColor = "tomato";
-      category4Value.style.backgroundColor = "tomato";
-      er6.textContent = "Te pola nie mogą być puste!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (category1Value.value === "") {
-      category1Value.style.backgroundColor = "tomato";
-      er6.textContent = "To pole nie może być puste!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (category2Value.value === "") {
-      category2Value.style.backgroundColor = "tomato";
-      er6.textContent = "To pole nie może być puste!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (category4Value.value === "") {
-      category4Value.style.backgroundColor = "tomato";
-      er6.textContent = "Wartość nie może być mniejsza od 0!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else if (category4Value.value < 0 || category5Value.value < 0) {
-      er6.textContent = "Te wartości nie mogą być mniejsze od 0!";
-      er6.style.color = "rgb(255, 0, 0)";
-    } else {
-      taskToEdit.children[0].textContent = category1Value.value;
-      taskToEdit.children[1].textContent = category2Value.value;
-      taskToEdit.children[2].textContent = category3Value.value;
-      taskToEdit.children[3].textContent = category4Value.value;
-      taskToEdit.children[4].textContent = category5Value.value;
-      taskToEdit.children[5].textContent = ''
-      taskToEdit.children[5].textContent =
-			Number(taskToEdit.children[4].textContent) - Number(actualKm.textContent);
-      taskToEdit.children[6].textContent = ''
-      taskToEdit.children[6].textContent =  
-			Number(actualKm.textContent) - Number(taskToEdit.children[3].textContent)  
+		kilometers = " KM";
 
-      kilometers = " KM"
+		newResult6.textContent += kilometers;
+		newResult7.textContent += kilometers;
 
-      
-      newResult6.textContent += kilometers;
-      newResult7.textContent += kilometers;
-      
-  
-      for (const cat of catArray) {
-        cat.style.backgroundColor = "rgb(211, 211, 211";
-        cat.value = "";
-        er5.textContent = "";
-      }
-    }
-    const numbers = /[0-9]/;
-    const letters = /[a-z]/;
-    if (category4Value.value.match(numbers) && category4Value.value >= 0) {
-      category4Value.style.backgroundColor = "rgb(211,211,211)";
-    }
-    if (category1Value.value !== "") {
-      category1Value.style.backgroundColor = "rgb(211,211,211)";
-    }
-    if (category2Value.value.match(numbers)) {
-      category2Value.style.backgroundColor = "rgb(211,211,211)";
-    
-  };
-}
+		for (const cat of catArray) {
+			cat.style.backgroundColor = "rgb(211, 211, 211";
+			cat.value = "";
+			er5.textContent = "";
+		}
+	}
+	const numbers = /[0-9]/;
+	const letters = /[a-z]/;
+	if (category4Value.value.match(numbers) && category4Value.value >= 0) {
+		category4Value.style.backgroundColor = "rgb(211,211,211)";
+	}
+	if (category1Value.value !== "") {
+		category1Value.style.backgroundColor = "rgb(211,211,211)";
+	}
+	if (category2Value.value.match(numbers)) {
+		category2Value.style.backgroundColor = "rgb(211,211,211)";
+	}
+};
 
 document.addEventListener("DOMContentLoaded", main);
