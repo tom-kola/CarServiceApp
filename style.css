@@ -8,7 +8,6 @@ html {
 }
 body {
 	font-family: "Saira", arial, sans-serif;
-	
 }
 
 /* HEADER */
@@ -28,7 +27,7 @@ div.auto {
 }
 div.leftside {
 	flex-basis: 50%;
-  position: relative;
+	position: relative;
 }
 div.leftside h1 {
 	padding: 15px 0 15px 30px;
@@ -44,9 +43,9 @@ p.brand {
 	cursor: default;
 }
 div.leftside button {
-  position: absolute;
-  bottom: 0;
-  left: 140px;
+	position: absolute;
+	bottom: 0;
+	left: 140px;
 	width: 100px;
 	height: 30px;
 	margin: 0 0 35px 30px;
@@ -147,7 +146,7 @@ button.large i {
 	background-color: rgb(100, 100, 100);
 	border: 4px solid rgb(211, 211, 211);
 	border-radius: 10px;
-  z-index: 3;
+	z-index: 3;
 }
 .popup-wrapper {
 	display: flex;
@@ -167,7 +166,7 @@ button.large i {
 	outline: none;
 }
 .x1 {
-  display: block;
+	display: block;
 	position: absolute;
 	top: 10%;
 	left: 95%;
@@ -207,7 +206,6 @@ p.error-info {
 	font-weight: 300;
 }
 
-
 /* DIV AVATARS */
 div.popup-avatars {
 	display: none;
@@ -220,7 +218,7 @@ div.popup-avatars {
 	background-color: rgb(100, 100, 100);
 	border: 4px solid rgb(211, 211, 211);
 	border-radius: 10px;
-  z-index: 3;
+	z-index: 3;
 }
 div.wrapper-avatars {
 	display: flex;
@@ -292,7 +290,7 @@ section.main {
 	justify-content: center;
 }
 div.wrapper-main {
-  position: relative;
+	position: relative;
 	width: 70%;
 	min-height: 30vh;
 	background-color: rgb(211, 211, 211);
@@ -317,13 +315,13 @@ div.wrapper-main {
 p.category:last-child {
 	border-style: none;
 }
-.wrapper-main .addnewbutton{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: flex-end;
-  width: 100%;
-  height: 100px;
+.wrapper-main .addnewbutton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-end;
+	width: 100%;
+	height: 100px;
 }
 button.newtask {
 	width: 140px;
@@ -355,7 +353,7 @@ button.newtask:hover {
 	background-color: rgb(100, 100, 100);
 	border: 4px solid rgb(58, 58, 58);
 	border-radius: 10px;
-  z-index: 2;
+	z-index: 2;
 }
 .popup-task .popup-categories {
 	display: flex;
@@ -363,10 +361,10 @@ button.newtask:hover {
 .popup-task p.category {
 	flex-basis: 15%;
 	height: 30px;
-  border-right: 1px solid rgb(58, 58, 58);
+	border-right: 1px solid rgb(58, 58, 58);
 	font-size: 1.1rem;
-  text-align: center;
-  line-height: 30px;
+	text-align: center;
+	line-height: 30px;
 }
 .popup-task p.category:last-child {
 	border-style: none;
@@ -409,10 +407,10 @@ button.newtask:hover {
 .x3:hover {
 	color: rgb(223, 160, 0);
 }
-.popup-task .er5{
-  padding: 5px;
-  padding-top: 20px;
-  font-size: 1.4rem;
+.popup-task .er5 {
+	padding: 5px;
+	padding-top: 20px;
+	font-size: 1.4rem;
 }
 
 /* UL LISTA */
@@ -420,11 +418,10 @@ button.newtask:hover {
 .wrapper-main ul {
 	margin: 10px 0 10px 0;
 	list-style: none;
-  
 }
 .wrapper-main li {
 	display: flex;
-  position: relative;
+	position: relative;
 	width: 100%;
 	height: 40px;
 }
@@ -440,12 +437,9 @@ button.newtask:hover {
 .wrapper-main li p.result:nth-of-type(7) {
 	border-style: none;
 }
-/* .container{
-  
-} */
-.edit-buttons{
- display: block;
- 
+
+.edit-buttons {
+	display: block;
 }
 .edittask {
 	position: absolute;
@@ -462,11 +456,11 @@ button.newtask:hover {
 	line-height: 30px;
 	color: rgb(58, 58, 58);
 	transition: 0.3s;
-  cursor: pointer;
-  z-index: 1;
+	cursor: pointer;
+	z-index: 1;
 }
-.edittask:hover{
-  color: greenyellow;
+.edittask:hover {
+	color: greenyellow;
 }
 .delete {
 	position: absolute;
@@ -476,46 +470,45 @@ button.newtask:hover {
 	width: 0;
 	height: 0;
 	background-color: rgb(140, 140, 140);
-  border-style: none;
-  border-left: 2px solid rgb(58, 58, 58);
+	border-style: none;
+	border-left: 2px solid rgb(58, 58, 58);
 	border-radius: 0 10px 10px 0;
 	font-size: 0;
 	text-align: center;
 	line-height: 30px;
 	color: rgb(58, 58, 58);
 	transition: 0.3s;
-  cursor: pointer;
-  z-index: 1;
+	cursor: pointer;
+	z-index: 1;
 }
-.delete:hover{
-  color: tomato;
+.delete:hover {
+	color: tomato;
 }
-.visible{
-  width: 100px;
-  height: 30px;
+.visible {
+	width: 100px;
+	height: 30px;
 }
-.fontsizetool{
-  font-size: 1.4rem;
+.fontsizetool {
+	font-size: 1.4rem;
 }
-.arrow{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width:10px;
-  height: 10px;
-  border-style: none;
-  background-color: transparent;
-  font-size: 1.5rem;
-  color: rgb(58, 58, 58);
-  transition: 0.3s;
-  cursor: pointer;
-  
+.arrow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	border-style: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+	color: rgb(58, 58, 58);
+	transition: 0.3s;
+	cursor: pointer;
 }
-.arrow:hover{
-  color: rgb(223, 160, 0);
+.arrow:hover {
+	color: rgb(223, 160, 0);
 }
-.confirmtask{
-  position: absolute;
+.confirmtask {
+	position: absolute;
 	top: 75%;
 	left: 50%;
 	transform: translateX(-50%);
@@ -530,16 +523,16 @@ button.newtask:hover {
 	cursor: pointer;
 	transition: 0.3s;
 }
-.confirmtask:hover{
-  background-color: rgb(223, 160, 0);
-  color: rgb(58, 58, 58);
+.confirmtask:hover {
+	background-color: rgb(223, 160, 0);
+	color: rgb(58, 58, 58);
 }
-.edittaskpopup{
-  display: none;
-  z-index: 2;
+.edittaskpopup {
+	display: none;
+	z-index: 2;
 }
-.block{
-  display: block;
+.block {
+	display: block;
 }
 .x4 {
 	position: absolute;
@@ -553,8 +546,8 @@ button.newtask:hover {
 .x4:hover {
 	color: rgb(223, 160, 0);
 }
-.er7{
-  text-align: center;
-  font-size: 1.4rem;
-  color: tomato;
+.er7 {
+	text-align: center;
+	font-size: 1.4rem;
+	color: tomato;
 }
