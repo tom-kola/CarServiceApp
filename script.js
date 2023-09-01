@@ -389,7 +389,10 @@ const addNewTask = () => {
 	} else if (cat4Value.value < 0 || cat5Value.value < 0) {
 		er5.textContent = "Te wartości nie mogą być mniejsze od 0!";
 		er5.style.color = "rgb(255, 0, 0)";
-	} else {
+	}else if(cat5Value.value < cat4Value.value){
+		er5.textContent = "Przebieg następnej wymiany nie może być niższy od przebiegu podczas wymiany!";
+		er5.style.color = "rgb(255, 0, 0)";
+	}	else {
 		newTask = document.createElement("li");
 		ulList.append(newTask);
 		newResult1 = document.createElement("p");
