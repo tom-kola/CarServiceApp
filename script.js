@@ -392,7 +392,11 @@ const addNewTask = () => {
 	}else if(cat5Value.value < cat4Value.value){
 		er5.textContent = "Przebieg następnej wymiany nie może być niższy od przebiegu podczas wymiany!";
 		er5.style.color = "rgb(255, 0, 0)";
-	}	else {
+	}else if(cat2Value.value > cat3Value.value){
+		er5.textContent = "Data następnej wymiany musi być poźniejsza niż data podczas wymiany";
+		er5.style.color = "rgb(255, 0, 0)";
+	}
+		else {
 		newTask = document.createElement("li");
 		ulList.append(newTask);
 		newResult1 = document.createElement("p");
